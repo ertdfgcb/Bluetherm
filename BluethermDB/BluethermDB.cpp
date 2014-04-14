@@ -3,13 +3,13 @@
 BluethermDB::BluethermDB (Driver *device, int start)
 {
 	mcMemory = device;
-	mStart = mLength = start;
+	mStart = m = start;
 }
 
 void BluethermDB::push (long value)
 {
-	mcMemory->write (mLength, value);
 	mLength++;
+	mcMemory->write (mLength, value);
 }
 
 long BluethermDB::read (int address)

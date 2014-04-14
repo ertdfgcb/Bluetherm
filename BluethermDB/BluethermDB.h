@@ -9,14 +9,14 @@
 class BluethermDB
 {
 	public:
-		BluethermDB (Driver, int = 0);
+		BluethermDB (Driver*, int = 0);
 		void push (long);
-		long read (int);
+		long pop (int = mEnd);
 		int getLength();
 		int getStart();
 	private:
-		int mStart, mLength;
-		Driver mcMemory;
+		int mStart, mEnd
+		Driver *mcMemory;
 };
 
 #endif
